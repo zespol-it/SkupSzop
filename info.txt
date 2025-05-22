@@ -1,0 +1,37 @@
+Podsumowanie Implementacji Zadań
+
+Zadanie Szóste - Naprawa Listowania Atrybutów:
+- Naprawiono widok indeksu atrybutów poprzez usunięcie nieistniejącej kolumny 'pages'
+- Zaktualizowano widok, aby wyświetlał tylko istniejące kolumny: szerokość, wysokość i wagę
+- Zapewniono prawidłową strukturę tabeli i stylowanie Bootstrap
+
+Zadanie Siódme - Global Scope dla Kategorii:
+- Utworzono klasę PopularCategoryScope do filtrowania kategorii o popularności > 2
+- Dodano global scope do modelu Category
+- Zaimplementowano funkcjonalność aplikowania i usuwania scope'a
+- Zapewniono wpływ scope'a na wszystkie zapytania modelu Category
+
+Zadanie Ósme - Route Model Binding dla Autorów:
+- Dodano pole slug do tablicy fillable w modelu Author
+- Zaimplementowano metodę getRouteKeyName() do używania sluga w route binding
+- Zaktualizowano trasy, aby używały URL-i opartych na slugu
+- Zachowano prawidłowe relacje modelu i soft deletes
+
+Zadanie Dziewiąte - Implementacja Ról Użytkowników:
+- Utworzono RoleEnum z przypadkami USER i ADMIN
+- Utworzono model Role z odpowiednimi relacjami
+- Utworzono tabele roles i users_roles wraz z migracjami
+- Dodano relację roles i metodę hasRole do modelu User
+- Utworzono widoki dla użytkownika i admina
+- Zaimplementowano kontrolę dostępu opartą na rolach w PageController
+- Utworzono RoleSeeder i UserSeeder
+- Skonfigurowano relacje w tabeli pivot
+
+Zadanie Dziesiąte - Seeder dla Atrybutów:
+- Utworzono AttributeFactory z generowaniem realistycznych danych:
+  * Szerokość: 10-300
+  * Wysokość: 10-400
+  * Waga: 0.1-5.0 (3 miejsca po przecinku)
+- Utworzono AttributeSeeder generujący 10 losowych atrybutów
+- Zintegrowano seeder w DatabaseSeeder
+- Zapewniono prawidłowe wypełnianie danymi i walidację 
